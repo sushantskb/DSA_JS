@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <script>
+        let data = [9,45,2,8,58,7,5,8,2,7];
+
+        // Traversing
+        for (let i = 0; i < data.length; i++) {
+            document.write(`Array at ${i} is ${data[i]} <br>`);
+        }
+
+        // Accessing
+        let x = 4;
+        document.write("The data at ", x, " is ", data[x], `<br> <hr>`);
+
+        // Function
+        function getElement(){
+            let ele = document.getElementById("element").value;
+            if(ele > data.length){
+                alert("Please enter a valid number");
+            } else{
+                alert(`The array at ${ele} is ${data[ele]}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Validation -->
+    <input type="text" id="element" />
+    <button type="submit" onclick="getElement()">Get the Element</button>
+</body>
+</html>
