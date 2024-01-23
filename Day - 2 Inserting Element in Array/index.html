@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Element</title>
+    <script>
+      function insertElem() {
+        let data = [60, 30, 10, 67, 40];
+        let newElem = document.getElementById("newElem").value;
+        newElem = parseInt(newElem);
+        let pos = document.getElementById("pos").value;
+        position = parseInt(pos);
+        console.warn("Before Insertion", data);
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i === position) {
+              data[i] = newElem;
+            }
+          }
+        }
+        console.warn("After insertion" ,data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="newElem" name="newEl" />
+    <input type="text" id="pos" name="position" />
+    <button type="button" onclick="insertElem()">Insert Element</button>
+  </body>
+</html>
