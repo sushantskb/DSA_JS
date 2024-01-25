@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deleting an Element</title>
+    <script>
+      let data = [12, 13, 34, 56, 23];
+      document.write(`<h1>[${data}]</h1> <br>`);
+      function delEle() {
+        let pos = document.getElementById("ele").value;
+        if (pos <= data.length) {
+          for (let i = pos; i < data.length - 1; i++) {
+            data[i] = data[i + 1];
+          }
+          data.length = data.length - 1;
+          document.write(`<h1>[${data}]</h1> <br>`);
+        } else{
+            alert('Invalid Position');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="ele"
+      placeholder="Enter the postion"
+      style="padding: 12px 30px"
+    />
+    <button type="submit" onclick="delEle()">Delete</button>
+  </body>
+</html>
