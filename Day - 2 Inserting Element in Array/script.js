@@ -12,3 +12,8 @@ for (let i = data.length - 1; i >= 0; i--) {
   }
 }
 console.log(data);
+
+
+//shortcut to insert
+data.splice(1, 0, 2000); // here 1 means the index, 0 is the number of elements we want to delete and 2000 is the number we want to insert
+console.log(data);
