@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [14, 88, 6, 96, 455, 8];
+      document.write(`<h1>${data}</h1>`);
+
+      function findEle() {
+        let item = document.getElementById("ele").value;
+        let index = undefined;
+        let flag = 0;
+        for (let i = 0; i < data.length-1; i++) {
+          if (data[i] == item) {
+            index = i;
+            flag = 1;
+            break;
+            
+          }
+        }
+        if(flag == 1){
+            document.write(`<h1>${item} is present at index ${index}</h1>`);
+        } else{
+            alert(`${item} is not present`)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="ele" placeholder="Enter the element" />
+    <button type="submit" onclick="findEle()">Find</button>
+  </body>
+</html>
