@@ -1,0 +1,17 @@
+Time Complexity : Time complexity refers to the amount of time an algorithm takes to complete, as a function of the size of its input.
+    Example: Imagine you are searching for a book in a library. The time it takes to find the book depends on how the books are organized. If they are sorted by title, you can use a binary search, which is faster (logarithmic time complexity). If they are not sorted, you might need to check each book one by one (linear time complexity).
+
+    Common Notations:
+        O(1) - Constant time complexity (e.g., accessing an element in an array).
+        O(log n) - Logarithmic time complexity (e.g., binary search).
+        O(n) - Linear time complexity (e.g., iterating through an array).
+        O(n^2) - Quadratic time complexity (e.g., nested loops).
+
+Space Complexity : Space complexity refers to the amount of memory an algorithm uses, as a function of the size of its input.
+
+    Example : Think of a computer program as a chef in a kitchen. The space complexity is like the counter space and storage used for ingredients and utensils. If a chef needs more space to prepare a larger recipe, the space complexity increases.
+
+    Common Notations:
+        O(1) - Constant space complexity (e.g., a variable that doesn't depend on the input size).
+        O(n) - Linear space complexity (e.g., an array that grows with the input size).
+        O(n^2) - Quadratic space complexity (e.g., a 2D array where the size depends on the square of the input size).
