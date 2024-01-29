@@ -1,0 +1,16 @@
+Asymplotic Analysis : Asymptotic analysis is a way of analyzing the efficiency of algorithms as the input size approaches infinity. It helps us understand how the performance of an algorithm scales with the size of the input.
+
+Practical Analogy : 
+        Imagine you're comparing two ways of doing homework: method A and method B.
+            Method A: Every day, you complete your homework by checking every problem one by one. If you have 10 problems, it takes 10 minutes. If you have 100 problems, it takes 100 minutes.
+            Method B: You use a strategy that involves checking pairs of problems and swapping them if they're not in the right order. You repeat this process until the entire homework is sorted correctly.
+
+            Now, let's think about asymptotic analysis using our homework example:
+
+                Big O (O): This is like saying, "In the worst case, how much time might it take for the homework to be finished?" For Method A, it's O(n) - time grows linearly with the number of problems. For Method B, it's O(n^2) - time grows with the square of the number of problems.
+
+                Omega (Ω): This is like asking, "In the best case, how quickly can we finish the homework?" For Method A, it's Ω(n) - best case is linear. For Method B, it's Ω(n^2) - best case is quadratic.
+
+                Theta (Θ): This is like saying, "In the long run, how fast are we generally getting our homework done?" For Method A, it's Θ(n) - it's linear. For Method B, it's Θ(n^2) - it's quadratic.
+
+                So, in a nutshell, asymptotic analysis helps us describe the efficiency of our methods as the number of problems (or the input size) becomes really large. It's a way of talking about how our methods behave without getting too caught up in specific details.
