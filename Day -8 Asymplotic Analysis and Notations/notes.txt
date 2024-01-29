@@ -13,4 +13,4 @@ Practical Analogy :
 
                 Theta (Θ): This is like saying, "In the long run, how fast are we generally getting our homework done?" For Method A, it's Θ(n) - it's linear. For Method B, it's Θ(n^2) - it's quadratic.
 
-                So, in a nutshell, asymptotic analysis helps us describe the efficiency of our methods as the number of problems (or the input size) becomes really large. It's a way of talking about how our methods behave without getting too caught up in specific details.
+            So, in a nutshell, asymptotic analysis helps us describe the efficiency of our methods as the number of problems (or the input size) becomes really large. It's a way of talking about how our methods behave without getting too caught up in specific details.
