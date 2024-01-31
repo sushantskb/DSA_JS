@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion Data Structure</title>
+    <script>
+      function getFact() {
+        function fact(item) {
+          if (item == 0) {
+            return 1;
+          }
+          return item * fact(item - 1);
+        }
+
+        n = document.getElementById("n").value;
+        document.write(`<h1>The result is ${fact(n)}</h1>`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Get the Factorial</h1>
+    <input type="text" id="n" placeholder="Enter the number" />
+    <button onclick="getFact()">Find</button>
+  </body>
+</html>
