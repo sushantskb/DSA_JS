@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Operation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      let data = [];
+      let currentSize = 0;
+      const maxSize = 10;
+
+      function push() {
+        let val = document.getElementById("val").value;
+        if (currentSize < maxSize) {
+          data[currentSize] = val;
+          currentSize++;
+        } else {
+          alert("Stack limit reached");
+        }
+        display();
+      }
+
+      function pop() {
+        if (currentSize > 0) {
+          currentSize--;
+          data.length = currentSize;
+          display();
+        } else {
+          alert("Stack is empty");
+        }
+      }
+
+      function display() {
+        let output = document.getElementById("output");
+        output.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+          output.innerHTML += data[i] + ", ";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" placeholder="Enter the element" id="val" />
+      <div class="sub-con">
+        <button onclick="push()" class="btn">Add</button>
+        <button onclick="pop()" class="btn">Remove</button>
+      </div>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>
