@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front and Rear operations Queue with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Front and Rear Operations Queue with JavaScript</h2>
+        <input type="text" class="input" id="value" placeholder="Enter a value" />
+        <div class="buttons">
+            <button onclick="enqueue()">Add Element</button>
+            <button onclick="dequeue()">Remove Element</button>
+            <button onclick="alertRear()">Rear Element</button>
+            <button onclick="alertFront()">Front Element</button>
+            <button onclick="display()">Display Element</button>
+        </div>
+        <div class="display" id="display"></div>
+    </div>
+
+<script>
+    let queue = [];
+    let currentSize = queue.length;
+    const maxSize = 10;
+
+    function enqueue() {
+        let val = document.getElementById("value").value.trim();
+        if (val !== "" && currentSize < maxSize) {
+            queue.push(val);
+            currentSize++;
+            updateDisplay();
+        } else if (val === "") {
+            alert("Please enter a value.");
+        } else {
+            alert("Queue is full.");
+        }
+    }
+
+    function dequeue() {
+        if (currentSize > 0) {
+            queue.shift();
+            currentSize--;
+            updateDisplay();
+        } else {
+            alert("Queue is already empty.");
+        }
+    }
+
+    function isEmpty() {
+        return currentSize <= 0;
+    }
+
+    function alertRear() {
+        if (!isEmpty()) {
+            alert("Rear Element: " + queue[currentSize - 1]);
+        } else {
+            alert("Queue is empty.");
+        }
+    }
+
+    function alertFront() {
+        if (!isEmpty()) {
+            alert("Front Element: " + queue[0]);
+        } else {
+            alert("Queue is empty.");
+        }
+    }
+
+    function display() {
+        if (!isEmpty()) {
+            document.getElementById("display").innerText = "Queue: " + queue.join(", ");
+        } else {
+            document.getElementById("display").innerText = "Queue is empty.";
+        }
+    }
+
+    function updateDisplay() {
+        display();
+        document.getElementById("value").value = "";
+    }
+</script>
+</body>
+</html>
