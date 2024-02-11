@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Element</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-field">
+      <input id="searchInput" type="text" placeholder="Enter your value" />
+    </div>
+    <button onclick="search()" class="btn">Search</button>
+    <div class="show" id="searchResult"></div>
+  </div>
+
+  <script>
+    function search() {
+      let data = [2, 23, 34, 56, 67, 12];
+      let find = parseInt(document.getElementById('searchInput').value);
+      console.log("find:", find);
+      let pos = -1;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] === find) {
+          pos = i;
+          break;
+        }
+      }
+
+      if (pos === -1) {
+        document.getElementById('searchResult').innerText = "Element doesn't exist";
+      } else {
+        document.getElementById('searchResult').innerText = `The element is present at ${pos} position`;
+      }
+    }
+  </script>
+</body>
+</html>
