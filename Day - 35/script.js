@@ -48,6 +48,6 @@ let list = new List(400);
 list.appendNode(23);
 list.appendNode(3);
 list.appendNode(32);
-list.deletion(3)
-list.traversing()
-// console.log(list); 
+list.traversing();
+list.deletion(3);
+console.log(list); 
