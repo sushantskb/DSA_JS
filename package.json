@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dsa_js": "file:",
     "lodash": "^4.17.21",
     "prompt-sync": "^4.2.0"
   }
